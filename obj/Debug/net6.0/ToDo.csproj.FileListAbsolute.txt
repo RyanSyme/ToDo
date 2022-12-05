@@ -1,0 +1,15 @@
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\bin\Debug\net6.0\ToDo.exe
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\bin\Debug\net6.0\ToDo.deps.json
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\bin\Debug\net6.0\ToDo.runtimeconfig.json
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\bin\Debug\net6.0\ToDo.dll
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\bin\Debug\net6.0\ToDo.pdb
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ToDo.csproj.AssemblyReference.cache
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ToDo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ToDo.AssemblyInfoInputs.cache
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ToDo.AssemblyInfo.cs
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ToDo.csproj.CoreCompileInputs.cache
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ToDo.dll
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\refint\ToDo.dll
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ToDo.pdb
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ToDo.genruntimeconfig.cache
+C:\Users\Roosticles IV\3D Objects\Lexicon\ToDo\obj\Debug\net6.0\ref\ToDo.dll
