@@ -2,13 +2,12 @@
 using System.Text.Json;
 using ToDo;
 
-// List<ToDoList> myToDo = new List<ToDoList>();
-
+// Loads the current ToDo list from a json file
 string toDoJsonData = File.ReadAllText("ToDo.json");
 var myToDo = JsonSerializer.Deserialize<List<ToDoList>>(toDoJsonData);
 
 bool RunProgram = true;
-
+// Loops through program
 while (RunProgram)
 {
     Console.WriteLine("Please choose an option from the list:");
@@ -20,6 +19,7 @@ while (RunProgram)
     Console.WriteLine("[5]: *SAVE* and *EXIT* application");
     Console.WriteLine("---------------------------------------");
     Console.Write("Please enter an option: ");
+
     string UserChoice = (Console.ReadLine() ?? "");
     if (UserChoice == "1")
     {
@@ -28,8 +28,10 @@ while (RunProgram)
         Console.WriteLine("[1]: Project");
         Console.WriteLine("[2]: Due Date");
         Console.WriteLine("");
+
         string orderChoice = (Console.ReadLine() ?? "");
         bool choiceMade = false;
+        // Displays new option to see list ordered by project or by due date
         while (!choiceMade)
         {
             if (orderChoice == "1")
@@ -72,6 +74,7 @@ while (RunProgram)
             }
         }
     }
+    //  Starts function to add a new item to the ToDo list
     else if (UserChoice == "2")
     {
         Console.WriteLine("Please add a new task to the ToDo list:");
@@ -111,8 +114,10 @@ while (RunProgram)
         myToDo?.Add(newTask);
         
     }
+    //  Starts function that displays Todo so user can choose which item to edit 
     else if (UserChoice == "3")
     {
+        // Displays ToDo list
         List<ToDoList> byDateToDo = myToDo!.OrderBy(x => x.DueDate).ToList();
         Console.WriteLine();
         Console.ForegroundColor = ConsoleColor.Yellow;
@@ -126,9 +131,11 @@ while (RunProgram)
         Console.WriteLine("---------------------------------------");
         Console.WriteLine();
         Console.WriteLine("Please enter the TITLE of the task you wish to edit:");
+        // Asks user to type which ToDo item to edit
         string editChoice = (Console.ReadLine() ?? "");
         Console.WriteLine("");
         var editCheck = myToDo!.FirstOrDefault(x => x.Title == editChoice);
+        // If the user entry matches a list item runs through the edit function
         if (editCheck != null)
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -180,8 +187,10 @@ while (RunProgram)
         }
             
     }
+    //  Starts function that displays Todo so user can choose which item to delete 
     else if (UserChoice == "4")
     {
+        // Displays ToDo list
         List<ToDoList> byDateToDo = myToDo!.OrderBy(x => x.DueDate).ToList();
         Console.WriteLine();
         Console.ForegroundColor = ConsoleColor.Yellow;
@@ -194,6 +203,7 @@ while (RunProgram)
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("---------------------------------------");
         Console.WriteLine();
+        // Asks user to type which task to delete
         Console.WriteLine("Please enter the TITLE of the task you wish to Delete:");
         string deleteChoice = (Console.ReadLine() ?? "");
         var deleteCheck = myToDo!.FirstOrDefault(x => x.Title == deleteChoice);
@@ -207,6 +217,7 @@ while (RunProgram)
         Console.WriteLine("-----------------");
         Console.ForegroundColor = ConsoleColor.White;
     }
+    // Saves the new Todo list to a json file and quits program
     else if (UserChoice == "5")
     {
         string jsonString = JsonSerializer.Serialize(myToDo);
